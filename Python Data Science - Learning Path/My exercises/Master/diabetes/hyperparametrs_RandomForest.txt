@@ -1,0 +1,31 @@
+#TREE specific parameters:
+
+1) max_depth - controls the three depth
+
+- more depth = overfit
+-shallow depth = underfit
+
+2) min_samples_split - when to split a node (default 2)
+
+- min samples in the parent node, split node, that are required for the split
+
+3) interaction with **min_samples_leaf**
+
+
+- if min_samples_leaf is set to 3, and parent node is 10, split to 7 to 3 , it will not be alowed because of this condition
+even if min_samples_split is set to pass the condition above.
+
+4) n_estimators - number of trees, default = 100
+-higher number of trees do not increase the overfitting, they lead to better performance at the cost of higher computational expense
+
+5) max_features = considering the maximum number of featurs when splitting a node
+
+6) bootstrap (true/false) - bootstrap sampling,  for each tree in the forest, If true, each tree is trained on the random sample of data
+- that is making the model more diverse
+- false -> all trees use the full dataset
+
+
+#Hyperparameters tuning
+RandomizedSearchCV !
+
+
